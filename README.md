@@ -1,8 +1,6 @@
 # Faat
 
-[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat)
+[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)[![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat)[![Code Climate](https://codeclimate.com/repos/5682a7159f15887c160012db/badges/cf30bc0cbeae6d202620/gpa.svg)](https://codeclimate.com/repos/5682a7159f15887c160012db/feed)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faat`. To experiment with that code, run `bin/console` for an interactive prompt.
 
