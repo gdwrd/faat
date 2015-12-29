@@ -1,5 +1,6 @@
 namespace 'faat'
 
+# creating resources_generator
 class ResourcesGenerator < Rails::Generators::Base
   def create_resources_file
     create_file "app/resources/#{file_name}_resource.rb", <<-FILE

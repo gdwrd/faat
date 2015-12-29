@@ -4,33 +4,37 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'faat/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "faat"
+  spec.name          = 'faat'
   spec.version       = Faat::VERSION
-  spec.authors       = ["Nazarii Sheremet"]
-  spec.email         = ["xo8bit@gmail.com"]
+  spec.authors       = ['Nazarii Sheremet']
+  spec.email         = ['xo8bit@gmail.com']
 
-  spec.summary       = %q{Faat kills your fat models.}
-  spec.description   = %q{Gem Faat kills your fat models.}
-  spec.homepage      = "https://github.com/xo8bit/faat"
-  spec.license       = "MIT"
+  spec.summary       = 'Faat kills your fat models.'
+  spec.description   = 'Gem Faat kills your fat models.'
+  spec.homepage      = 'https://github.com/xo8bit/faat'
+  spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org"
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+    fail 'RubyGems 2.0 or newer is required to protect against
+            public gem pushes.'
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
+  spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency "virtus", "~> 1.0.5"
-  spec.add_runtime_dependency "activemodel", "~> 4.2.5"
+  spec.add_runtime_dependency 'virtus', '~> 1.0.5'
+  spec.add_runtime_dependency 'activemodel', '~> 4.2.5'
+  spec.add_runtime_dependency 'activesupport'
 
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
+  spec.add_development_dependency 'bundler', '~> 1.11'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec'
 end
