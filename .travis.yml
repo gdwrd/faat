@@ -20,4 +20,4 @@ branches:
 
 addons:
   code_climate:
-    repo_token: ENV['CODECLIMATE_REPO_TOKEN']
+    repo_token: 42e8f1763d78539f2d85eb0b89bd78392de8407a8703634bc4ab44e38dde08ae

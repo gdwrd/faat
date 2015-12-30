@@ -1,5 +1,6 @@
-require 'faat'
 require 'codeclimate-test-reporter'
-require 'support/model'
-
 CodeClimate::TestReporter.start
+
+# CodeClimate should be first
+require 'faat'
+require 'support/model'
