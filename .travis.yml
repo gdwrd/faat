@@ -8,10 +8,16 @@ rvm:
 script:
   - rspec spec
 
+deploy:
+  provider: rubygems
+  api_key: ENV['RUBYGEMS_API_KEY']
+  on:
+    branch: master
+
 branches:
   only:
     - master
 
 addons:
   code_climate:
-    repo_token: cb81d043af3e1f629267a1295b0d9c7c5ec40fcf4c36c4c503e630ec5d37e93b
+    repo_token: ENV['CODECLIMATE_REPO_TOKEN']
