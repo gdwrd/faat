@@ -27,7 +27,7 @@ module Faat
 
       def method_missing(name, *attr, &block)
         # getting resource by instance variable :resource_name
-        instance_variable_get("@#{@resource_name}").send(name, *attr, &block) || super
+        resource.send(name, *attr, &block) || super
       end
 
       # initialize :respond_to_missing? method for working with
@@ -36,7 +36,7 @@ module Faat
       def respond_to_missing?(name, include_private = false)
         # getting resource by instance variable :resource_name,
         # for :respond_to? method
-        instance_variable_get("@#{@resource_name}").respond_to?(name) || super
+        resource.respond_to?(name) || super
       end
 
       # add class methods form resource class
@@ -57,6 +57,12 @@ module Faat
           end
         end
       end
+
+      private
+
+        def resource
+          instance_variable_get("@#{@resource_name}")
+        end
     end
   end
 end

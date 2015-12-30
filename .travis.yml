@@ -1,8 +1,17 @@
 language: ruby
+
 rvm:
   - 2.2.4
   - 2.3.0
   - ruby-head
+
+script:
+  - rspec spec
+
+branches:
+  only:
+    - master
+
 addons:
-    code_climate:
-        repo_token: cb81d043af3e1f629267a1295b0d9c7c5ec40fcf4c36c4c503e630ec5d37e93b
+  code_climate:
+    repo_token: cb81d043af3e1f629267a1295b0d9c7c5ec40fcf4c36c4c503e630ec5d37e93b
