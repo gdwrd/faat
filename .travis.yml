@@ -1,23 +1,21 @@
 language: ruby
-
 rvm:
-  - 2.2.4
-  - 2.3.0
-  - ruby-head
-
+- 2.2.4
+- 2.3.0
+- ruby-head
 script:
-  - bundle exec rake
-
+- bundle exec rake
 deploy:
   provider: rubygems
-  api_key: ENV['RUBYGEMS_API_KEY']
+  api_key:
+    secure: PpOZw6/CAnaFuSnSUeUMpNKTFBwLMjMwjPt62iTQK9eqozlAzuVJ2fQ1q7zrI4n6bXWHHb3fz+YkFUDZp+BEx5xI5Q73/Q79lRRFLUsY6C4jEezkTgXxVacNgaIrv7xcbxjoVMBJIzi0lFMEGpASCBsOU0iEZmBMeScFH5+KUc95nvzlQ8OTGw9841+QzJwslQrKtNi/uSaXGzKBr6w8FrNv5Qgo2UlkuS3lOJ8w7SKUexvemmRR3C4IXgDJcoG9HeZUz9tF8+BXCee28RBkrBMYnaDePCelf7iJ0kYUY273caQrqrnBAtHWRfnf7Hq8UpOEApy9JEzWM7hnzTEda6MU/moFam4sVMagWyr4+C9W7/eXybcMUcwLxPyqR2S0W7qT6lsggOEcA+tJdTZaNQFD8Oc1Em+XHymSVkI0kvPD3b4Mrt+IelTItWfexn3y683styu8nAU0A7xGAFkUyWOCQJbO/WdP5Ry+DRQ9EG3jbk/0CHyl+ca6nFPifhTp016rXhLsrVGsqKAkuXEu9vGof6moYN/t37WyzWf8UQOkL6OK0rdVl35xR0/VcGucYPO5SKgGeWC6rC7mOXGHIOvbRxzxx8zxTkaQWiZkDMiOQyqyZdYMLc9QYsJv+hVU52MUsBpFHUTdqVaY3NWlEcC9i8rYwWrqBUdzxboeHBg=
+  gem: faat
   on:
-    branch: master
-
+    tags: true
+    repo: xo8bit/faat
 branches:
   only:
-    - master
-
+  - master
 addons:
   code_climate:
     repo_token: 42e8f1763d78539f2d85eb0b89bd78392de8407a8703634bc4ab44e38dde08ae

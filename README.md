@@ -1,6 +1,6 @@
 # Faat
 
-[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat) [![Code Climate](https://codeclimate.com/repos/5682a7159f15887c160012db/badges/cf30bc0cbeae6d202620/gpa.svg)](https://codeclimate.com/repos/5682a7159f15887c160012db/feed) [![Build Status](https://travis-ci.org/xo8bit/faat.svg?branch=develop)](https://travis-ci.org/xo8bit/faat)
+[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat) [![Code Climate](https://codeclimate.com/repos/5682a7159f15887c160012db/badges/cf30bc0cbeae6d202620/gpa.svg)](https://codeclimate.com/repos/5682a7159f15887c160012db/feed) [![Build Status](https://travis-ci.org/xo8bit/faat.svg?branch=develop)](https://travis-ci.org/xo8bit/faat) [![Test Coverage](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/badges/275483f4f40ccd7c48af/coverage.svg)](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/coverage)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faat`. To experiment with that code, run `bin/console` for an interactive prompt.
 
