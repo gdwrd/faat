@@ -6,7 +6,7 @@ rvm:
   - ruby-head
 
 script:
-  - rspec spec
+  - bundle exec rake
 
 deploy:
   provider: rubygems
