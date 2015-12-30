@@ -23,7 +23,7 @@
 
 require 'faat/version'
 require 'faat/resources/base'
-require 'faat/support/string'
+require 'faat/helpers/string'
 require 'active_support/inflector'
 
 # root gem module
