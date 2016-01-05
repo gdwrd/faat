@@ -21,11 +21,11 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
+require 'rails'
 require 'faat/version'
 require 'faat/resources/base'
 require 'faat/helpers/string'
 require 'active_support/inflector'
-require 'generators/faat'
 
 # root gem module
 module Faat
