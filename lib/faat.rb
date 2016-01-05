@@ -25,6 +25,7 @@ require 'faat/version'
 require 'faat/resources/base'
 require 'faat/helpers/string'
 require 'active_support/inflector'
+require 'generators/faat'
 
 # root gem module
 module Faat
