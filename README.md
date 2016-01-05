@@ -22,21 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-Create dir ```resources```, and files ```{model_name}_resource.rb```
-Example:
-```ruby
-class PostResources < Faat::Resources::Base
-    # your business logic put here
-end
-```
+Run ```rails generate faat:resources {model_name}```, 
+generator will create folder ```resource``` in ```app``` directory, and file ```{model_name}_resource.rb```
 
-Initialize:
+
+###Initialize:
 ```ruby
 @post = Post.new
 @post_resource = PostResource.new(@post)
 ```
 
-Usage:
+###Usage:
 ```ruby
 @post_resource.destroy  => destroy @post
 @post_resource.update   => update @post
