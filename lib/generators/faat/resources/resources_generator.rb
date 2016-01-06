@@ -16,10 +16,6 @@ module Faat
         resource_name.underscore
       end
 
-      def constant_name
-        resource_name.underscore.upcase
-      end
-
       def class_name
         resource_name.downcase.capitalize
       end
