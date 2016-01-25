@@ -23,11 +23,13 @@
 
 require 'rails'
 require 'faat/version'
-require 'faat/resources/base'
+require 'faat/faat_object/faat_object'
 require 'faat/helpers/string'
 require 'active_support/inflector'
 
 # root gem module
 module Faat
   autoload :Resources, 'faat/resources/base'
+  autoload :Forms, 'faat/forms/base'
+  autoload :Services, 'faat/services/base'
 end
