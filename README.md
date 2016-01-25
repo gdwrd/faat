@@ -25,6 +25,9 @@ Or install it yourself as:
 Run ```rails generate faat:resources {model_name}```, 
 generator will create folder ```resource``` in ```app``` directory, and file ```{model_name}_resource.rb```
 
+Run ```rails generate faat:services {service_name}```, 
+generator will create folder ```services``` in ```app``` directory, and file ```{service_name}_service.rb```
+
 Run ```rails generate faat:forms {form_name} {attribute_name}:{attribute_type}```,
 generator will create folder ```forms``` in ```app``` directory, and file ```{form_name}_form.rb```
 
@@ -44,10 +47,11 @@ generator will create folder ```forms``` in ```app``` directory, and file ```{fo
 PostResource.last     => Post.last
 PostResource.all      => Post.all
 PostResource.where(title: "First Test Title") => Post.where(...)
+
+# the same for Services
 ```
 
 ###Examples:
-
 
 In ```post_resource.rb```
 ```ruby
