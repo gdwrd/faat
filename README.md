@@ -1,6 +1,6 @@
 # Faat
 
-[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat) [![Code Climate](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/badges/275483f4f40ccd7c48af/gpa.svg)](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/feed) [![Test Coverage](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/badges/275483f4f40ccd7c48af/coverage.svg)](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/coverage) [![Build Status](https://travis-ci.org/xo8bit/faat.svg?branch=develop)](https://travis-ci.org/xo8bit/faat) 
+[![Join the chat at https://gitter.im/xo8bit/faat](https://badges.gitter.im/xo8bit/faat.svg)](https://gitter.im/xo8bit/faat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Gem Version](https://badge.fury.io/rb/faat.svg)](https://badge.fury.io/rb/faat) [![Code Climate](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/badges/275483f4f40ccd7c48af/gpa.svg)](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/feed) [![Test Coverage](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/badges/275483f4f40ccd7c48af/coverage.svg)](https://codeclimate.com/repos/5683d90ecbc0bf2f17002347/coverage) [![Build Status](https://travis-ci.org/xo8bit/faat.svg?branch=develop)](https://travis-ci.org/xo8bit/faat)
 
 Welcome to `faat` gem!
 
@@ -22,10 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Run ```rails generate faat:resources {model_name}```, 
-generator will create folder ```resource``` in ```app``` directory, and file ```{model_name}_resource.rb```
-
-Run ```rails generate faat:services {service_name}```, 
+Run ```rails generate faat:services {service_name}```,
 generator will create folder ```services``` in ```app``` directory, and file ```{service_name}_service.rb```
 
 Run ```rails generate faat:forms {form_name} {attribute_name}:{attribute_type}```,
@@ -34,36 +31,34 @@ generator will create folder ```forms``` in ```app``` directory, and file ```{fo
 ###Initialize:
 ```ruby
 @post = Post.new
-@post_resource = PostResource.new(@post)
+@post_service = PostService.new(@post)
 
 @post_form = PostForm.new(post_form_params)
 ```
 
 ###Usage:
 ```ruby
-@post_resource.destroy  => destroy @post
-@post_resource.update   => update @post
+@post_service.destroy  => destroy @post
+@post_service.update   => update @post
 
-PostResource.last     => Post.last
-PostResource.all      => Post.all
-PostResource.where(title: "First Test Title") => Post.where(...)
-
-# the same for Services
+PostService.last     => Post.last
+PostService.all      => Post.all
+PostService.where(title: "First Test Title") => Post.where(...)
 ```
 
 ###Examples:
 
-In ```post_resource.rb```
+In ```post_services.rb```
 ```ruby
-class PostResource < Faat::Resources::Base
+class PostService < Faat::Services::Base
     ...
-    
+
     def initialize(post_form)
         @author = Author.create!(name: post_form.author_name, email: post_form.author_email)
         @post = Post.create!(text: post_form.text, title: post_form.title)
         send_confirmation_email(@author)
     end
-    
+
     ...
 end
 ```
@@ -74,7 +69,7 @@ In```post_controller.rb```
 def create
     @post_form = PostForm.new(post_form_params)
     if @post_form.valid?
-        @post_resource = PostResource.new(@post_form) => create @author and @post
+        @post_service = PostService.new(@post_form) => create @author and @post
     end
 end
 ```
@@ -100,4 +95,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/xo8bit
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
