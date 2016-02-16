@@ -29,7 +29,6 @@ require 'active_support/inflector'
 
 # root gem module
 module Faat
-  autoload :Resources, 'faat/resources/base'
   autoload :Forms, 'faat/forms/base'
   autoload :Services, 'faat/services/base'
 end
