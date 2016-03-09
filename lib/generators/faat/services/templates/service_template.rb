@@ -4,7 +4,7 @@
 <%= "# #{service_name}Service.new( ModelClassName.new )" %>
 <%= "# or with instance variable #{service_name}Service.new(@model_class_name)" %>
 
-class <%= service_name %>Service < Faat::Service::Base
+class <%= service_name %>Service < Faat::Services::Base
 
   # add your business logic here
 
